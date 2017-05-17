@@ -26,6 +26,6 @@ public class LabelRestController {
     @GetMapping
     public ResponseEntity<Collection<LabelJson>> getLabels() {
         LOGGER.info("LabelRestController.getLabels");
-        return new ResponseEntity<>(labelsJsons.values(), HttpStatus.CREATED);
+        return new ResponseEntity<>(labelsJsons.values(), HttpStatus.OK);
     }
 }
