@@ -36,6 +36,6 @@ public class LabelRestController {
         LOGGER.info("LabelRestController.getLabels");
         Collection<LabelJson> labelJsons = new HashSet<>();
         labelRepository.findAll().forEach(pLabelEntity -> labelJsons.add(new LabelJson(pLabelEntity)));
-        return new ResponseEntity<>(labelJsons, HttpStatus.CREATED);
+        return new ResponseEntity<>(labelJsons, HttpStatus.OK);
     }
 }
